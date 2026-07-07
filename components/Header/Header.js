@@ -4,10 +4,12 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import useCartStore from '../../store/useCartStore';
+import { useSession, signOut } from 'next-auth/react';
 
 export default function Header() {
   const container = useRef();
   const { cart } = useCartStore();
+  const { data: session } = useSession();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -73,6 +75,21 @@ export default function Header() {
               </span>
             )}
           </Link>
+          {mounted && session ? (
+            <div className="relative group flex items-center gap-2 cursor-pointer">
+              <img src={session.user?.image || 'https://images.unsplash.com/photo-1566492031522-8730999966b4?ixlib=rb-4.0.3&w=100&h=100&fit=crop'} alt="User" className="w-8 h-8 rounded-full border border-cian object-cover" />
+              <button onClick={() => signOut()} className="hidden group-hover:block absolute top-10 right-0 bg-carbon border border-cyber/30 px-4 py-2 text-sm text-error hover:bg-tactical/10 transition-colors whitespace-nowrap z-50">
+                Sign Out
+              </button>
+            </div>
+          ) : (
+            mounted && (
+              <Link href="/login" className="text-cyber hover:text-white transition-colors">
+                <i className="fas fa-user text-xl"></i>
+              </Link>
+            )
+          )}
+
           <Link 
             href="/lan" 
             className="hidden md:block bg-cian text-carbon font-inter font-bold px-6 py-2 rounded-sm uppercase tracking-wide hover:shadow-glow-cian transition-all duration-300 transform hover:-translate-y-0.5"
