@@ -3,9 +3,6 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import styles from './Header.module.css';
-
-gsap.registerPlugin(useGSAP);
 
 export default function Header() {
   const container = useRef();
@@ -20,25 +17,41 @@ export default function Header() {
   }, { scope: container });
 
   return (
-    <header className={styles.headerx} ref={container}>
-      <nav className={styles.container}>
-        <div>
-          <Link href="/">
-            <img
-              src="/assets/logoletra.svg"
-              alt="Logo"
-              className={styles.logo}
-            />
+    <header 
+      ref={container}
+      className="fixed top-0 w-full z-50 bg-carbon/90 backdrop-blur-md border-b border-white/5 shadow-lg"
+    >
+      <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
+      <nav className="relative container mx-auto px-4 h-20 flex justify-between items-center">
+        <Link href="/">
+          <span className="text-2xl font-syne font-extrabold text-cian tracking-tighter">SUDOKU<span className="text-white">GAMES</span></span>
+        </Link>
+        
+        <div className="hidden md:flex gap-8 items-center">
+          <Link href="/lan" className="text-sm font-orbitron text-cyber hover:text-white transition-colors duration-300 uppercase">
+            Zona LAN
+          </Link>
+          <Link href="/shop" className="text-sm font-orbitron text-cyber hover:text-white transition-colors duration-300 uppercase">
+            Tienda
+          </Link>
+          <Link href="/service" className="text-sm font-orbitron text-cyber hover:text-white transition-colors duration-300 uppercase">
+            Servicio Técnico
           </Link>
         </div>
-        <div className={styles.actions}>
-          <Link href="https://api.whatsapp.com/send?phone=51970594631&text=Hello,%20I'm%20interested%20in%20your%20products!" className={styles.iconLink} target="_blank" rel="noopener noreferrer">
-            <span className={styles.linkText}>WhatsApp</span>
-            <i className="fab fa-whatsapp"></i>
+
+        <div className="flex gap-4 items-center">
+          <button className="text-cyber hover:text-white transition-colors">
+            <i className="fas fa-search text-xl"></i>
+          </button>
+          <Link href="/cart" className="text-cyber hover:text-white transition-colors relative">
+            <i className="fas fa-shopping-cart text-xl"></i>
+            <span className="absolute -top-2 -right-2 bg-tactical text-carbon text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
           </Link>
-          <Link href="tel:+51970594631" className={styles.iconLink}>
-            <span className={styles.linkText}>Call Us</span>
-            <i className="fas fa-phone"></i>
+          <Link 
+            href="/lan" 
+            className="hidden md:block bg-cian text-carbon font-inter font-bold px-6 py-2 rounded-sm uppercase tracking-wide hover:shadow-glow-cian transition-all duration-300 transform hover:-translate-y-0.5"
+          >
+            Reservar
           </Link>
         </div>
       </nav>

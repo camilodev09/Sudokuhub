@@ -4,7 +4,6 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import styles from './FeaturesSection.module.css';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -12,54 +11,42 @@ export default function FeaturesSection() {
   const container = useRef();
 
   useGSAP(() => {
-    gsap.from('.feature-img', {
+    gsap.from('.ticker-item', {
       scrollTrigger: {
         trigger: container.current,
         start: 'top 80%',
       },
       opacity: 0,
-      scale: 0.95,
-      duration: 1.2,
+      y: 20,
+      duration: 0.8,
+      stagger: 0.2,
       ease: 'power2.out'
-    });
-
-    gsap.from('.feature-content', {
-      scrollTrigger: {
-        trigger: container.current,
-        start: 'top 70%',
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'back.out(1.7)'
     });
   }, { scope: container });
 
   return (
-    <section className={styles.featuresSection} ref={container}>
-      <div className={styles.mainContainer}>
-        <div className={styles.flexCenter}>
-          <img
-            src="/assets/banner2.png"
-            alt="Feature Image"
-            className={`feature-img ${styles.bannerImg}`}
-          />
-          <div className={`feature-content ${styles.absoluteContent}`}>
-            <h2 className={styles.title}>
-              Shop at Sudoku Games
-            </h2>
-            <p className={styles.description}>
-              Looking for the ultimate gaming experience? <br />
-              Look no further! Our selection of games <br />
-              has something for every type of gamer <br />
-              from the hottest new releases to retro classics <br />
-              that will take you back in time. <br />
-              Get ready to level up your gaming <br />
-              with our wide range of titles!
-            </p>
-            <Link href="#" className={styles.actionBtn}>
-              More info
-              <i className={`fas fa-info ${styles.icon}`}></i>
+    <section ref={container} className="py-20 bg-carbon relative">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-syne text-white uppercase mb-10 border-l-4 border-cian pl-4">Esta Semana en Sudoku</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Ticker 1: LAN Event */}
+          <div className="ticker-item glass-panel p-8 relative overflow-hidden group cursor-pointer hover:border-cian/50 transition-colors duration-300">
+            <div className="absolute top-0 right-0 bg-cian text-carbon font-bold px-4 py-1 text-sm uppercase">Torneo LAN</div>
+            <h3 className="text-2xl font-orbitron text-cian mb-2 mt-4">VALORANT PRO-AM</h3>
+            <p className="text-cyber font-mono mb-4">Viernes 19:00 // Premio: $500</p>
+            <Link href="/lan" className="inline-block mt-4 text-white font-inter uppercase text-sm tracking-widest hover:text-cian transition-colors">
+              Ver Calendario <i className="fas fa-arrow-right ml-2"></i>
+            </Link>
+          </div>
+
+          {/* Ticker 2: Shop Offer */}
+          <div className="ticker-item glass-panel p-8 relative overflow-hidden group cursor-pointer hover:border-tactical/50 transition-colors duration-300">
+            <div className="absolute top-0 right-0 bg-error text-white font-bold px-4 py-1 text-sm uppercase animate-pulse">Oferta Flash</div>
+            <h3 className="text-2xl font-orbitron text-tactical mb-2 mt-4">NVIDIA RTX 4080</h3>
+            <p className="text-cyber font-mono mb-4">$1199 // Solo 10 unidades disponibles</p>
+            <Link href="/shop" className="inline-block mt-4 text-white font-inter uppercase text-sm tracking-widest hover:text-tactical transition-colors">
+              Ir a Ofertas <i className="fas fa-arrow-right ml-2"></i>
             </Link>
           </div>
         </div>

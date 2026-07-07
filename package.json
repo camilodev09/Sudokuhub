@@ -10,9 +10,22 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@paypal/react-paypal-js": "^10.1.1",
+    "@stripe/react-stripe-js": "^6.7.0",
+    "@stripe/stripe-js": "^9.9.0",
+    "@supabase/supabase-js": "^2.110.1",
     "gsap": "^3.15.0",
     "next": "^14.2.35",
+    "next-auth": "^4.24.14",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.2",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^16.2.10",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^3.4.19"
   }
 }

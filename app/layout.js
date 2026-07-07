@@ -1,22 +1,28 @@
 import './globals.css';
+import Providers from '../components/Providers';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 export const metadata = {
-  title: 'Sudoku Games',
-  description: 'Welcome to the most exciting video game store',
+  title: 'Sudoku Games | Cyber-Elite Hub',
+  description: 'Premium LAN Experience & Pro Hardware Shop',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          crossOrigin="anonymous"
-        />
-        <link rel="icon" type="image/svg" href="/assets/favicon.svg" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
       </head>
-      <body>{children}</body>
+      <body className="bg-carbon text-white font-inter antialiased overflow-x-hidden">
+        <Providers>
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }
