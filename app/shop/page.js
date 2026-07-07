@@ -10,7 +10,7 @@ const FALLBACK_PRODUCTS = [
     price: 999.99,
     category: 'GPU',
     brand: 'NVIDIA',
-    image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_gpu_rtx4080_1783459916332.jpg',
     specs: '16GB GDDR6X | 2550 MHz Boost | 10240 CUDA Cores'
   },
   {
@@ -19,7 +19,7 @@ const FALLBACK_PRODUCTS = [
     price: 899.99,
     category: 'Monitors',
     brand: 'Dell',
-    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_monitor_alienware_1783459923529.jpg',
     specs: '34" Curved | 165Hz | 0.1ms GtG | HDR400 True Black'
   },
   {
@@ -28,7 +28,7 @@ const FALLBACK_PRODUCTS = [
     price: 589.99,
     category: 'CPU',
     brand: 'Intel',
-    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_cpu_intel_1783459932288.jpg',
     specs: '24 Cores (8P+16E) | Up to 6.0 GHz | 36MB Cache'
   },
   {
@@ -37,7 +37,7 @@ const FALLBACK_PRODUCTS = [
     price: 159.99,
     category: 'Peripherals',
     brand: 'Logitech G',
-    image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_mouse_logitech_1783459939450.jpg',
     specs: '60g Ultra-light | HERO 2 Sensor | LIGHTSPEED Wireless'
   },
   {
@@ -46,7 +46,7 @@ const FALLBACK_PRODUCTS = [
     price: 699.99,
     category: 'CPU',
     brand: 'AMD',
-    image: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_cpu_amd_1783459947344.jpg',
     specs: '16 Cores | 3D V-Cache | Up to 5.7 GHz'
   },
   {
@@ -55,7 +55,7 @@ const FALLBACK_PRODUCTS = [
     price: 299.99,
     category: 'Motherboards',
     brand: 'ASUS',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_mobo_asus_1783460006803.jpg',
     specs: 'AM5 | PCIe 5.0 | WiFi 6E'
   },
   {
@@ -64,7 +64,7 @@ const FALLBACK_PRODUCTS = [
     price: 279.99,
     category: 'Memory',
     brand: 'Corsair',
-    image: 'https://images.unsplash.com/photo-1562976540-1502f75a6c0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_ram_corsair_1783460030347.jpg',
     specs: 'DDR5 6000MHz | CL30 | RGB'
   },
   {
@@ -73,7 +73,7 @@ const FALLBACK_PRODUCTS = [
     price: 149.99,
     category: 'Peripherals',
     brand: 'Razer',
-    image: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_mouse_razer_1783460037552.jpg',
     specs: '63g | Focus Pro 30K | Ergonomic'
   },
   {
@@ -82,7 +82,7 @@ const FALLBACK_PRODUCTS = [
     price: 189.99,
     category: 'Storage',
     brand: 'Samsung',
-    image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/prod_ssd_samsung_1783460045180.jpg',
     specs: 'NVMe M.2 | Up to 7450 MB/s Read'
   }
 ];
@@ -126,7 +126,7 @@ export default function ShopPage() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-syne font-extrabold text-cian tracking-tighter uppercase drop-shadow-2xl">Pro Hardware</h1>
-            <p className="text-white font-inter text-lg mt-4 max-w-2xl">Equipa tu estación de batalla con el mejor hardware de la industria.</p>
+            <p className="text-white font-inter text-lg mt-4 max-w-2xl">Equip your battle station with the industry's best hardware.</p>
           </div>
         </div>
       </div>

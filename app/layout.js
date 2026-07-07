@@ -2,6 +2,7 @@ import './globals.css';
 import Providers from '../components/Providers';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import WhatsAppButton from '../components/WhatsAppButton/WhatsAppButton';
 
 export const metadata = {
   title: 'Sudoku Games | Pro Gaming Hub',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <WhatsAppButton />
         </Providers>
       </body>
     </html>

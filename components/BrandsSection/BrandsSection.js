@@ -24,7 +24,7 @@ export default function BrandsSection() {
       <div className="absolute inset-0 bg-cyber-grid opacity-30 pointer-events-none"></div>
       
       <div className="container mx-auto px-4 mb-8 text-center relative z-10">
-        <h2 className="text-2xl font-inter text-white uppercase tracking-widest">Jugadores de Élite, Partners de Confianza</h2>
+        <h2 className="text-2xl font-inter text-white uppercase tracking-widest">Elite Players, Trusted Partners</h2>
       </div>
 
       <div className="flex overflow-hidden whitespace-nowrap relative z-10 opacity-70" ref={containerRef}>

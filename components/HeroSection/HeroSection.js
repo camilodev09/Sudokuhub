@@ -23,15 +23,43 @@ export default function HeroSection() {
   return (
     <section ref={container} className="relative w-full min-h-screen md:h-screen flex flex-col md:flex-row overflow-x-hidden pt-28 md:pt-0 bg-carbon">
       
-      {/* Text Overlay (Relative on Mobile, Absolute on Desktop) */}
-      <div className="relative md:absolute md:inset-0 z-20 flex flex-col items-center justify-center pointer-events-none text-center px-4 mb-10 md:mb-0">
-        <h1 className="hero-text text-5xl md:text-6xl lg:text-7xl font-syne font-extrabold text-white tracking-tighter drop-shadow-2xl max-w-4xl leading-tight">
-          Unleash <br className="hidden md:block" />the <span className={hoveredSide === 'lan' ? 'text-cian transition-colors duration-500' : hoveredSide === 'shop' ? 'text-lilac transition-colors duration-500' : 'text-white transition-colors duration-500'}>Gamer</span> in You!
-        </h1>
-        <h2 className="hero-text mt-6 md:mt-6 text-lg md:text-xl font-inter text-gray-200 max-w-2xl font-light">
-          Welcome to the most exciting video game store. <br />
-          Get ready to immerse yourself in the most anticipated video game of the year.
-        </h2>
+      {/* Hero Content */}
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4">
+        <div className="text-center max-w-4xl mx-auto mb-16 mt-16 md:mt-0">
+          <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl font-syne font-extrabold text-white uppercase tracking-tighter drop-shadow-2xl leading-tight">
+            Experience the <span className="text-cian">Next Level</span> of Gaming
+          </h1>
+          <p className="hero-text mt-6 text-lg md:text-xl font-inter text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Play on the best PCs in the country, buy elite hardware, or trust us with your rig. The ultimate ecosystem for real gamers.
+          </p>
+          
+          <div className="hero-text mt-12 flex flex-col sm:flex-row justify-center gap-6 items-center">
+            <Link href="/lan" className="bg-cian text-carbon font-orbitron font-bold px-8 py-4 rounded-sm uppercase tracking-widest hover:shadow-glow-cian transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto">
+              Book Now
+            </Link>
+            <Link href="/shop" className="border border-white/20 text-white hover:bg-white hover:text-carbon font-orbitron font-bold px-8 py-4 rounded-sm uppercase tracking-widest transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto">
+              View Shop
+            </Link>
+          </div>
+        </div>
+
+        <div className="hidden md:flex flex-row gap-12 mt-8">
+            <div className="flex flex-col items-center gap-2">
+              <i className="fas fa-microchip text-4xl text-cian mb-2"></i>
+              <span className="font-orbitron text-lg text-white">Powered By</span>
+              <span className="font-inter text-gray-400 text-sm">RTX 4080 & i9</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <i className="fas fa-wifi text-4xl text-cian mb-2"></i>
+              <span className="font-orbitron text-lg text-white">Zero Lag</span>
+              <span className="font-inter text-gray-400 text-sm">1Gbps Symmetric</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <i className="fas fa-trophy text-4xl text-cian mb-2"></i>
+              <span className="font-orbitron text-lg text-white">Elite Tournaments</span>
+              <span className="font-inter text-gray-400 text-sm">Weekly Prize Pools</span>
+            </div>
+        </div>
       </div>
 
       {/* LAN Split (Left/Top) */}
@@ -45,12 +73,6 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-[url('/assets/hero_lan_neon_1783457264592.jpg')] bg-cover bg-center mix-blend-overlay opacity-50 group-hover:opacity-80 transition-opacity duration-700"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/80 to-transparent"></div>
         <div className="absolute inset-0 bg-cian/10 mix-blend-color"></div>
-        
-        <Link href="/lan" className="hero-text relative z-30 pointer-events-auto">
-          <button className="bg-cian text-carbon font-orbitron font-bold text-lg md:text-xl px-8 py-4 rounded-sm uppercase tracking-widest hover:shadow-glow-cian transition-all duration-300 transform group-hover:-translate-y-2">
-            Explore LAN
-          </button>
-        </Link>
       </div>
 
       {/* SHOP Split (Right/Bottom) */}

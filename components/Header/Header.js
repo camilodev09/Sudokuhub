@@ -38,13 +38,26 @@ export default function Header() {
         
         <div className="hidden md:flex gap-8 items-center">
           <Link href="/lan" className="text-sm font-orbitron text-cyber hover:text-white transition-colors duration-300 uppercase">
-            Zona LAN
+            LAN Zone
           </Link>
           <Link href="/shop" className="text-sm font-orbitron text-cyber hover:text-white transition-colors duration-300 uppercase">
-            Tienda
+            Shop
           </Link>
           <Link href="/service" className="text-sm font-orbitron text-cyber hover:text-white transition-colors duration-300 uppercase">
-            Servicio Técnico
+            Tech Support
+          </Link>
+        </div>
+
+        {/* Mobile Nav Icons */}
+        <div className="md:hidden flex items-center gap-5 text-cian mr-2">
+          <Link href="/service" aria-label="Tech Support" className="hover:text-white transition-colors">
+            <i className="fas fa-cog text-xl"></i>
+          </Link>
+          <Link href="/lan" aria-label="LAN Zone" className="hover:text-white transition-colors">
+            <i className="fas fa-desktop text-xl"></i>
+          </Link>
+          <Link href="/contact" aria-label="Contact" className="hover:text-white transition-colors">
+            <i className="fas fa-phone text-xl"></i>
           </Link>
         </div>
 
@@ -64,7 +77,7 @@ export default function Header() {
             href="/lan" 
             className="hidden md:block bg-cian text-carbon font-inter font-bold px-6 py-2 rounded-sm uppercase tracking-wide hover:shadow-glow-cian transition-all duration-300 transform hover:-translate-y-0.5"
           >
-            Reservar
+            Book Now
           </Link>
         </div>
       </nav>

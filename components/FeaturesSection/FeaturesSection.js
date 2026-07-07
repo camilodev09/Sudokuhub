@@ -27,26 +27,26 @@ export default function FeaturesSection() {
   return (
     <section ref={container} className="py-20 bg-carbon relative">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-syne text-white uppercase mb-10 border-l-4 border-cian pl-4">Esta Semana en Sudoku</h2>
+        <h2 className="text-3xl font-syne text-white uppercase mb-10 border-l-4 border-cian pl-4">This Week at Sudoku</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Ticker 1: LAN Event */}
           <div className="ticker-item glass-panel p-8 relative overflow-hidden group cursor-pointer hover:border-cian/50 transition-colors duration-300">
-            <div className="absolute top-0 right-0 bg-cian text-carbon font-bold px-4 py-1 text-sm uppercase">Torneo LAN</div>
+            <div className="absolute top-0 right-0 bg-cian text-carbon font-bold px-4 py-1 text-sm uppercase">LAN Tournament</div>
             <h3 className="text-2xl font-orbitron text-cian mb-2 mt-4">VALORANT PRO-AM</h3>
-            <p className="text-cyber font-mono mb-4">Viernes 19:00 // Premio: $500</p>
+            <p className="text-cyber font-mono mb-4">Friday 19:00 // Prize: $500</p>
             <Link href="/lan" className="inline-block mt-4 text-white font-inter uppercase text-sm tracking-widest hover:text-cian transition-colors">
-              Ver Calendario <i className="fas fa-arrow-right ml-2"></i>
+              View Schedule <i className="fas fa-arrow-right ml-2"></i>
             </Link>
           </div>
 
           {/* Ticker 2: Shop Offer */}
           <div className="ticker-item glass-panel p-8 relative overflow-hidden group cursor-pointer hover:border-tactical/50 transition-colors duration-300">
-            <div className="absolute top-0 right-0 bg-error text-white font-bold px-4 py-1 text-sm uppercase animate-pulse">Oferta Flash</div>
+            <div className="absolute top-0 right-0 bg-error text-white font-bold px-4 py-1 text-sm uppercase animate-pulse">Flash Sale</div>
             <h3 className="text-2xl font-orbitron text-tactical mb-2 mt-4">NVIDIA RTX 4080</h3>
-            <p className="text-cyber font-mono mb-4">$1199 // Solo 10 unidades disponibles</p>
+            <p className="text-cyber font-mono mb-4">$1199 // Only 10 units available</p>
             <Link href="/shop" className="inline-block mt-4 text-white font-inter uppercase text-sm tracking-widest hover:text-tactical transition-colors">
-              Ir a Ofertas <i className="fas fa-arrow-right ml-2"></i>
+              Go to Sales <i className="fas fa-arrow-right ml-2"></i>
             </Link>
           </div>
         </div>

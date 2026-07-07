@@ -11,8 +11,8 @@ export default function ServicePage() {
       <div className="bg-graphite border-b tech-border py-16 relative">
         <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-syne font-extrabold text-white tracking-tighter uppercase">Servicio Técnico <span className="text-cian">Experto</span></h1>
-          <p className="mt-4 font-mono text-cyber max-w-2xl mx-auto">Diagnóstico preciso. Soluciones reales. Rendimiento máximo.</p>
+          <h1 className="text-4xl md:text-5xl font-syne font-extrabold text-white tracking-tighter uppercase">Expert Tech <span className="text-cian">Support</span></h1>
+          <p className="mt-4 font-mono text-cyber max-w-2xl mx-auto">Precise diagnostics. Real solutions. Maximum performance.</p>
         </div>
       </div>
 
@@ -29,11 +29,11 @@ export default function ServicePage() {
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <h2 className="text-3xl font-orbitron text-cian mb-4">Mantenimiento Preventivo</h2>
-            <p className="text-cyber font-inter text-lg leading-relaxed mb-6">Limpieza profunda de componentes, cambio de pasta térmica de alto rendimiento (Liquid Metal u Ouroboros), y optimización de flujo de aire para reducir las temperaturas drásticamente.</p>
+            <h2 className="text-3xl font-orbitron text-cian mb-4">Preventive Maintenance</h2>
+            <p className="text-cyber font-inter text-lg leading-relaxed mb-6">Deep component cleaning, high-performance thermal paste application (Liquid Metal or Ouroboros), and airflow optimization to drastically reduce temperatures.</p>
             <ul className="text-white font-mono text-sm space-y-2">
-              <li><i className="fas fa-check text-cian mr-2"></i>Desensamble Completo</li>
-              <li><i className="fas fa-check text-cian mr-2"></i>Limpieza Ultrasónica</li>
+              <li><i className="fas fa-check text-cian mr-2"></i>Complete Disassembly</li>
+              <li><i className="fas fa-check text-cian mr-2"></i>Ultrasonic Cleaning</li>
               <li><i className="fas fa-check text-cian mr-2"></i>Cable Management</li>
             </ul>
           </div>
@@ -49,12 +49,12 @@ export default function ServicePage() {
             </div>
           </div>
           <div className="w-full md:w-1/2 text-left md:text-right">
-            <h2 className="text-3xl font-orbitron text-tactical mb-4">Upgrades & Armado Custom</h2>
-            <p className="text-cyber font-inter text-lg leading-relaxed mb-6">¿Cuello de botella? Asesoramiento e instalación de nuevas GPUs, CPUs, o sistemas de refrigeración líquida Custom Loop para entusiastas.</p>
+            <h2 className="text-3xl font-orbitron text-tactical mb-4">Upgrades & Custom Builds</h2>
+            <p className="text-cyber font-inter text-lg leading-relaxed mb-6">Bottleneck? Advice and installation of new GPUs, CPUs, or Custom Loop liquid cooling systems for enthusiasts.</p>
             <ul className="text-white font-mono text-sm space-y-2 inline-block text-left">
-              <li><i className="fas fa-check text-tactical mr-2"></i>Instalación de Hardware</li>
-              <li><i className="fas fa-check text-tactical mr-2"></i>Configuración de BIOS/XMP</li>
-              <li><i className="fas fa-check text-tactical mr-2"></i>Stress Tests de Estabilidad</li>
+              <li><i className="fas fa-check text-tactical mr-2"></i>Hardware Installation</li>
+              <li><i className="fas fa-check text-tactical mr-2"></i>BIOS/XMP Configuration</li>
+              <li><i className="fas fa-check text-tactical mr-2"></i>Stability Stress Tests</li>
             </ul>
           </div>
         </div>
@@ -64,17 +64,17 @@ export default function ServicePage() {
       {/* Quote Form */}
       <div className="bg-graphite py-24 border-t tech-border relative">
         <div className="container mx-auto px-4 max-w-3xl relative z-10">
-          <h2 className="text-3xl font-syne text-white uppercase text-center mb-10">Solicitar Cotización Técnica</h2>
+          <h2 className="text-3xl font-syne text-white uppercase text-center mb-10">Request Tech Quote</h2>
           
           <form className="glass-panel p-8 md:p-12 flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
             <div className="flex flex-col md:flex-row gap-6">
-              <input type="text" placeholder="Nombre completo" className="w-full md:w-1/2 bg-black/50 border border-cyber/30 rounded-sm px-4 py-3 text-white font-mono focus:border-cian focus:outline-none transition-colors" />
-              <input type="email" placeholder="Correo electrónico" className="w-full md:w-1/2 bg-black/50 border border-cyber/30 rounded-sm px-4 py-3 text-white font-mono focus:border-cian focus:outline-none transition-colors" />
+              <input type="text" placeholder="Full Name" className="w-full md:w-1/2 bg-black/50 border border-cyber/30 rounded-sm px-4 py-3 text-white font-mono focus:border-cian focus:outline-none transition-colors" />
+              <input type="email" placeholder="Email Address" className="w-full md:w-1/2 bg-black/50 border border-cyber/30 rounded-sm px-4 py-3 text-white font-mono focus:border-cian focus:outline-none transition-colors" />
             </div>
-            <textarea placeholder="Describe el problema detalladamente o los componentes que deseas instalar..." rows="5" className="w-full bg-black/50 border border-cyber/30 rounded-sm px-4 py-3 text-white font-mono focus:border-cian focus:outline-none transition-colors resize-none"></textarea>
+            <textarea placeholder="Describe the issue in detail or the components you wish to install..." rows="5" className="w-full bg-black/50 border border-cyber/30 rounded-sm px-4 py-3 text-white font-mono focus:border-cian focus:outline-none transition-colors resize-none"></textarea>
             
             <button type="submit" className="w-full bg-cian text-carbon font-orbitron font-bold text-lg px-6 py-4 rounded-sm uppercase tracking-widest hover:shadow-glow-cian transition-all duration-300 transform hover:-translate-y-1">
-              Enviar Solicitud
+              Submit Request
             </button>
           </form>
         </div>
