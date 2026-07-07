@@ -120,13 +120,13 @@ export default function ShopPage() {
   return (
     <div className="pt-20 min-h-screen bg-carbon">
       {/* Editorial Banner */}
-      <div className="relative w-full h-[40vh] overflow-hidden mb-12">
+      <div className="relative w-full h-[35vh] overflow-hidden mb-12 mt-12 md:mt-0">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-carbon to-transparent"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-syne font-extrabold text-cian tracking-tighter uppercase drop-shadow-2xl">Pro Hardware</h1>
-            <p className="text-white font-inter text-lg mt-4 max-w-2xl">Equip your battle station with the industry's best hardware.</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-syne font-extrabold text-cian tracking-tighter uppercase drop-shadow-2xl">Pro Hardware</h1>
+            <p className="text-gray-300 font-inter text-base md:text-lg mt-4 max-w-2xl mx-auto">Equip your battle station with the industry's best hardware.</p>
           </div>
         </div>
       </div>

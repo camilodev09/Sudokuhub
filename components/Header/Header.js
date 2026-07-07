@@ -51,17 +51,7 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <div className="md:hidden flex items-center mr-2">
-          <button 
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="text-cian hover:text-white transition-colors"
-          >
-            <i className="fas fa-bars text-2xl"></i>
-          </button>
-        </div>
-
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 sm:gap-6 items-center">
           <Link href="/cart" className="text-cyber hover:text-white transition-colors relative">
             <i className="fas fa-shopping-cart text-xl"></i>
             {mounted && totalItems > 0 && (
@@ -70,6 +60,7 @@ export default function Header() {
               </span>
             )}
           </Link>
+          
           {mounted && session ? (
             <div className="relative group flex items-center gap-2 cursor-pointer">
               <img src={session.user?.image || 'https://images.unsplash.com/photo-1566492031522-8730999966b4?ixlib=rb-4.0.3&w=100&h=100&fit=crop'} alt="User" className="w-8 h-8 rounded-full border border-cian object-cover" />
@@ -85,6 +76,17 @@ export default function Header() {
             )
           )}
 
+          {/* Mobile Hamburger Button */}
+          <div className="md:hidden flex items-center ml-2">
+            <button 
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="text-cian hover:text-white transition-colors"
+            >
+              <i className="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+
+
           <Link 
             href="/lan" 
             className="hidden md:block bg-cian text-carbon font-inter font-bold px-6 py-2 rounded-sm uppercase tracking-wide hover:shadow-glow-cian transition-all duration-300 transform hover:-translate-y-0.5"
@@ -96,40 +98,41 @@ export default function Header() {
 
       {/* Gamer Style Mobile Menu Modal */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-carbon/95 backdrop-blur-xl">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-carbon border-b border-cian/20 shadow-2xl">
           <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cian via-tactical to-lilac"></div>
           
           <button 
             onClick={() => setIsMobileMenuOpen(false)}
-            className="absolute top-6 right-6 text-cian hover:text-tactical transition-colors text-3xl z-50"
+            className="absolute top-6 right-6 text-cian hover:text-white transition-colors text-4xl z-50"
           >
             <i className="fas fa-times"></i>
           </button>
           
-          <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-sm px-6">
-            <h2 className="text-3xl font-syne font-extrabold text-white uppercase tracking-widest mb-4 border-b border-cian/30 pb-4 w-full text-center">
+          <div className="relative z-10 flex flex-col items-center gap-6 w-full max-w-sm px-6">
+            <h2 className="text-3xl font-syne font-extrabold text-white uppercase tracking-widest mb-2 border-b border-cian/30 pb-4 w-full text-center">
               SYSTEM <span className="text-cian">MENU</span>
             </h2>
             
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Inicio
             </Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/lan" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/lan" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               LAN
             </Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/service" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/service" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Servicio Técnico
             </Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/shop" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/shop" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Store
             </Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Contacto
             </Link>
             
             {!session && (
-              <Link onClick={() => setIsMobileMenuOpen(false)} href="/login" className="w-full text-center mt-4 py-4 bg-cian text-carbon font-orbitron font-bold hover:shadow-glow-cian transition-all uppercase tracking-widest rounded-sm">
-                Iniciar Sesión
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/login" className="w-full text-center mt-6 py-5 bg-cian text-carbon font-orbitron font-bold text-lg hover:shadow-glow-cian transition-all uppercase tracking-widest rounded-sm border-2 border-cian">
+                Ingresar
               </Link>
             )}
           </div>
