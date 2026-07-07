@@ -24,12 +24,12 @@ export default function HeroSection() {
     <section ref={container} className="relative w-full min-h-screen md:h-screen flex flex-col md:flex-row overflow-x-hidden pt-28 md:pt-0 bg-carbon">
       
       {/* Hero Content */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4">
-        <div className="text-center max-w-4xl mx-auto mb-16 mt-16 md:mt-0">
-          <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl font-syne font-extrabold text-white uppercase tracking-tighter drop-shadow-2xl leading-tight">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 pt-10 md:pt-0">
+        <div className="text-center max-w-4xl mx-auto mb-8 md:mb-16 mt-20 md:mt-0">
+          <h1 className="hero-text text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-syne font-extrabold text-white uppercase tracking-tighter drop-shadow-2xl leading-tight md:leading-[1.1]">
             Experience the <span className="text-cian">Next Level</span> of Gaming
           </h1>
-          <p className="hero-text mt-6 text-lg md:text-xl font-inter text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="hero-text mt-4 md:mt-6 text-sm sm:text-base md:text-xl font-inter text-gray-300 max-w-2xl mx-auto leading-relaxed px-2">
             Play on the best PCs in the country, buy elite hardware, or trust us with your rig. The ultimate ecosystem for real gamers.
           </p>
           
@@ -86,12 +86,6 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-[url('/assets/hero_shop_neon_1783457274268.jpg')] bg-cover bg-center mix-blend-overlay opacity-50 group-hover:opacity-80 transition-opacity duration-700"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/80 to-transparent"></div>
         <div className="absolute inset-0 bg-lilac/10 mix-blend-color"></div>
-        
-        <Link href="/shop" className="hero-text relative z-30 pointer-events-auto">
-          <button className="bg-lilac text-carbon font-orbitron font-bold text-lg md:text-xl px-8 py-4 rounded-sm uppercase tracking-widest hover:shadow-glow-lilac transition-all duration-300 transform group-hover:-translate-y-2">
-            Search Store
-          </button>
-        </Link>
       </div>
 
     </section>

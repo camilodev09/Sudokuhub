@@ -11,6 +11,7 @@ export default function Header() {
   const { cart } = useCartStore();
   const { data: session } = useSession();
   const [mounted, setMounted] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -50,23 +51,17 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile Nav Icons */}
-        <div className="md:hidden flex items-center gap-5 text-cian mr-2">
-          <Link href="/service" aria-label="Tech Support" className="hover:text-white transition-colors">
-            <i className="fas fa-cog text-xl"></i>
-          </Link>
-          <Link href="/lan" aria-label="LAN Zone" className="hover:text-white transition-colors">
-            <i className="fas fa-desktop text-xl"></i>
-          </Link>
-          <Link href="/contact" aria-label="Contact" className="hover:text-white transition-colors">
-            <i className="fas fa-phone text-xl"></i>
-          </Link>
+        {/* Mobile Hamburger Button */}
+        <div className="md:hidden flex items-center mr-2">
+          <button 
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="text-cian hover:text-white transition-colors"
+          >
+            <i className="fas fa-bars text-2xl"></i>
+          </button>
         </div>
 
         <div className="flex gap-4 items-center">
-          <button className="text-cyber hover:text-white transition-colors">
-            <i className="fas fa-search text-xl"></i>
-          </button>
           <Link href="/cart" className="text-cyber hover:text-white transition-colors relative">
             <i className="fas fa-shopping-cart text-xl"></i>
             {mounted && totalItems > 0 && (
@@ -98,6 +93,48 @@ export default function Header() {
           </Link>
         </div>
       </nav>
+
+      {/* Gamer Style Mobile Menu Modal */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-carbon/95 backdrop-blur-xl">
+          <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
+          
+          <button 
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-6 right-6 text-cian hover:text-tactical transition-colors text-3xl z-50"
+          >
+            <i className="fas fa-times"></i>
+          </button>
+          
+          <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-sm px-6">
+            <h2 className="text-3xl font-syne font-extrabold text-white uppercase tracking-widest mb-4 border-b border-cian/30 pb-4 w-full text-center">
+              SYSTEM <span className="text-cian">MENU</span>
+            </h2>
+            
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+              Inicio
+            </Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/lan" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+              LAN
+            </Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/service" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+              Servicio Técnico
+            </Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/shop" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+              Store
+            </Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="w-full text-center py-3 bg-black/40 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+              Contacto
+            </Link>
+            
+            {!session && (
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/login" className="w-full text-center mt-4 py-4 bg-cian text-carbon font-orbitron font-bold hover:shadow-glow-cian transition-all uppercase tracking-widest rounded-sm">
+                Iniciar Sesión
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
     </header>
   );
 }
