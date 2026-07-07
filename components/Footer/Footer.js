@@ -31,7 +31,7 @@ export default function Footer() {
         
         <div className="footer-element flex flex-col items-center md:items-start">
           <Link href="/">
-            <span className="text-2xl font-syne font-extrabold text-cian tracking-tighter">SUDOKU<span className="text-white">GAMES</span></span>
+            <img src="/assets/logoletra.svg" alt="Sudoku Games" className="h-8 md:h-10 w-auto" />
           </Link>
           <p className="text-cyber font-mono text-sm mt-2">© 2026 Sudoku Games. All rights reserved.</p>
         </div>

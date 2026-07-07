@@ -19,6 +19,17 @@ const useCartStore = create(
       removeFromCart: (productId) => set((state) => ({
         cart: state.cart.filter(item => item.id !== productId)
       })),
+      decreaseQuantity: (productId) => set((state) => {
+        const existingItem = state.cart.find(item => item.id === productId);
+        if (existingItem?.quantity === 1) {
+          return { cart: state.cart.filter(item => item.id !== productId) };
+        }
+        return {
+          cart: state.cart.map(item =>
+            item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
+          )
+        };
+      }),
       clearCart: () => set({ cart: [] }),
       getTotal: () => get().cart.reduce((total, item) => total + (item.price * item.quantity), 0),
     }),
