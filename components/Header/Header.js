@@ -98,7 +98,7 @@ export default function Header() {
 
       {/* Gamer Style Mobile Menu Modal */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-carbon border-b border-cian/20 shadow-2xl">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black border-b border-cian/20 shadow-2xl">
           <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cian via-tactical to-lilac"></div>
           
