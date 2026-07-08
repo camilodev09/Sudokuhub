@@ -34,7 +34,7 @@ export default function ContactPage() {
           <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-16 flex flex-col justify-center bg-gradient-to-br from-graphite to-carbon relative">
             <div className="absolute inset-0 bg-cyber-grid opacity-10 pointer-events-none"></div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-syne font-extrabold text-white tracking-tighter uppercase mb-10 md:mb-12 px-2 md:px-0">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-syne font-extrabold text-white tracking-tighter uppercase mb-8 md:mb-12 px-2 md:px-0">
               Conecta con <br/><span className="text-cian">Nosotros</span>
             </h1>
 
