@@ -74,9 +74,9 @@ export default function CartPage() {
                   <span>Shipping</span>
                   <span className="text-tactical">Free</span>
                 </div>
-                <div className="flex justify-between mb-8">
-                  <span className="text-2xl font-syne font-extrabold text-white">Total</span>
-                  <span className="text-3xl font-syne font-extrabold text-cian">${total.toFixed(2)}</span>
+                <div className="flex flex-wrap justify-between items-end mb-8 gap-2 w-full overflow-hidden">
+                  <span className="text-xl sm:text-2xl font-syne font-extrabold text-white shrink-0">Total</span>
+                  <span className="text-2xl sm:text-3xl font-syne font-extrabold text-cian break-all text-right">${total.toFixed(2)}</span>
                 </div>
                 
                 {/* PayPal Container */}
