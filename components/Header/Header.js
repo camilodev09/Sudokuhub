@@ -111,29 +111,29 @@ export default function Header() {
             <i className="fas fa-times"></i>
           </button>
           
-          <div className="relative z-10 flex flex-col items-center gap-6 w-full max-w-sm px-6">
-            <h2 className="text-3xl font-syne font-extrabold text-white uppercase tracking-widest mb-2 border-b border-cian/30 pb-4 w-full text-center">
-              SYSTEM <span className="text-cian">MENU</span>
+          <div className="relative z-10 flex flex-col items-center gap-4 w-full max-w-sm px-6">
+            <h2 className="text-2xl font-syne font-extrabold text-white uppercase tracking-widest mb-2 border-b border-cian/30 pb-4 w-full text-center">
+              SUDOKU <span className="text-cian">HUB</span>
             </h2>
             
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className="w-full text-center py-3 text-sm bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Home
             </Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/lan" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/lan" className="w-full text-center py-3 text-sm bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               LAN Zone
             </Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/service" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/service" className="w-full text-center py-3 text-sm bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Tech Support
             </Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/shop" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/shop" className="w-full text-center py-3 text-sm bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Store
             </Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="w-full text-center py-3 text-sm bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Contact
             </Link>
             
             {!session && (
-              <Link onClick={() => setIsMobileMenuOpen(false)} href="/login" className="w-full text-center mt-6 py-5 bg-cian text-carbon font-orbitron font-bold text-lg hover:shadow-glow-cian transition-all uppercase tracking-widest rounded-sm border-2 border-cian">
+              <Link onClick={() => setIsMobileMenuOpen(false)} href="/login" className="w-full text-center mt-4 py-3 bg-cian text-carbon font-orbitron font-bold text-sm hover:shadow-glow-cian transition-all uppercase tracking-widest rounded-sm border-2 border-cian">
                 Sign In
               </Link>
             )}
