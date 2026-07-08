@@ -53,7 +53,7 @@ export default function CommunityTestimonialsSection() {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-syne font-extrabold text-white uppercase tracking-tighter">
+          <h2 className="text-4xl md:text-5xl font-syne font-extrabold text-white uppercase tracking-tighter px-2 md:px-0">
             Community <span className="text-tactical">Voices</span>
           </h2>
           <p className="text-cyber font-inter mt-4 max-w-2xl mx-auto">

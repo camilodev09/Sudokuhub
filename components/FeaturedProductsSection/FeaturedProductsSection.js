@@ -62,7 +62,7 @@ export default function FeaturedProductsSection() {
         
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div>
-            <h2 className="text-4xl md:text-5xl font-syne font-extrabold text-white uppercase tracking-tighter">
+            <h2 className="text-4xl md:text-5xl font-syne font-extrabold text-white uppercase tracking-tighter px-2 md:px-0">
               Featured <span className="text-cian">Hardware</span>
             </h2>
             <p className="text-cyber font-inter mt-4 max-w-xl">

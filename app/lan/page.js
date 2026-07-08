@@ -26,7 +26,7 @@ export default function LanPage() {
 
         {/* Left Content */}
         <div className="relative z-10 max-w-2xl text-left md:w-1/2">
-          <h1 className="text-5xl md:text-7xl font-syne font-extrabold text-cian uppercase tracking-tighter drop-shadow-2xl">PREMIUM LAN ZONE</h1>
+          <h1 className="text-5xl md:text-7xl font-syne font-extrabold text-cian uppercase tracking-tighter drop-shadow-2xl px-2 md:px-0">PREMIUM LAN ZONE</h1>
           <p className="mt-6 text-xl font-inter text-white opacity-90 leading-relaxed">
             Experience true performance. 50+ stations equipped with NVIDIA RTX 4070, Zowie 240Hz monitors, and premium ergonomic chairs. Zero lag.
           </p>

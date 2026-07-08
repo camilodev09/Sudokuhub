@@ -24,7 +24,7 @@ export default function CartPage() {
   return (
     <div className="pt-28 min-h-screen bg-carbon px-4 pb-20">
       <div className="container mx-auto max-w-6xl">
-        <h1 className="text-4xl md:text-5xl font-syne font-extrabold text-cian uppercase tracking-tighter mb-10">Your Cart</h1>
+        <h1 className="text-4xl md:text-5xl font-syne font-extrabold text-cian uppercase tracking-tighter mb-10 px-2 md:px-0">Your Cart</h1>
         
         {cart.length === 0 ? (
           <div className="glass-panel p-10 text-center">

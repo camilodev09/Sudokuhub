@@ -125,7 +125,7 @@ export default function ShopPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-carbon to-transparent"></div>
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-syne font-extrabold text-cian tracking-tighter uppercase drop-shadow-2xl">Pro Hardware</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-syne font-extrabold text-cian tracking-tighter uppercase drop-shadow-2xl px-2 md:px-0">Pro Hardware</h1>
             <p className="text-gray-300 font-inter text-base md:text-lg mt-4 max-w-2xl mx-auto">Equip your battle station with the industry's best hardware.</p>
           </div>
         </div>
@@ -164,11 +164,11 @@ export default function ShopPage() {
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-lg font-inter font-bold text-white mb-2 leading-tight">{product.name}</h3>
                 <p className="text-cyber font-mono text-xs mb-4 flex-grow">{product.specs}</p>
-                <div className="flex items-end justify-between mt-auto">
-                  <span className="text-2xl font-syne font-extrabold text-cian">${product.price}</span>
+                <div className="flex flex-wrap items-center justify-between gap-3 mt-auto pt-2">
+                  <span className="text-xl sm:text-2xl font-syne font-extrabold text-cian shrink-0">${product.price}</span>
                   <button 
                     onClick={() => addToCart(product)}
-                    className="bg-cian text-carbon font-inter font-bold px-4 py-2 text-sm uppercase rounded-sm hover:shadow-glow-cian transition-all duration-300 transform hover:-translate-y-1"
+                    className="bg-cian text-carbon font-inter font-bold px-4 py-2 text-sm uppercase rounded-sm hover:shadow-glow-cian transition-all duration-300 transform hover:-translate-y-1 whitespace-nowrap"
                   >
                     Add to Cart
                   </button>

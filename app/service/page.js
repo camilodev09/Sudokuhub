@@ -11,7 +11,7 @@ export default function ServicePage() {
       <div className="bg-graphite border-b tech-border py-16 relative">
         <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-syne font-extrabold text-white tracking-tighter uppercase">Expert Tech <span className="text-cian">Support</span></h1>
+          <h1 className="text-4xl md:text-5xl font-syne font-extrabold text-white tracking-tighter uppercase px-2 md:px-0">Expert Tech <span className="text-cian">Support</span></h1>
           <p className="mt-4 font-mono text-cyber max-w-2xl mx-auto">Precise diagnostics. Real solutions. Maximum performance.</p>
         </div>
       </div>
