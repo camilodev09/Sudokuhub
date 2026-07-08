@@ -8,7 +8,7 @@ export default function ContactPage() {
         <div className="glass-panel w-full flex flex-col md:flex-row overflow-hidden border tech-border">
           
           {/* Left Column: Interactive Map Placeholder (Cyber styled) */}
-          <div className="w-full md:w-1/2 h-[400px] md:h-[600px] relative bg-black flex items-center justify-center overflow-hidden">
+          <div className="w-full md:w-1/2 h-[250px] sm:h-[400px] md:h-[600px] relative bg-black flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 bg-cyber-grid opacity-20"></div>
             <div className="absolute w-64 h-64 border border-cian/30 rounded-full animate-ping opacity-20"></div>
             <div className="absolute w-32 h-32 border border-cian/50 rounded-full flex items-center justify-center">
@@ -31,10 +31,10 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Contact Info */}
-          <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center bg-gradient-to-br from-graphite to-carbon relative">
+          <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-16 flex flex-col justify-center bg-gradient-to-br from-graphite to-carbon relative">
             <div className="absolute inset-0 bg-cyber-grid opacity-10 pointer-events-none"></div>
             
-            <h1 className="text-4xl md:text-5xl font-syne font-extrabold text-white tracking-tighter uppercase mb-12 px-2 md:px-0">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-syne font-extrabold text-white tracking-tighter uppercase mb-10 md:mb-12 px-2 md:px-0">
               Conecta con <br/><span className="text-cian">Nosotros</span>
             </h1>
 
