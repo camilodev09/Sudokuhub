@@ -117,24 +117,24 @@ export default function Header() {
             </h2>
             
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
-              Inicio
+              Home
             </Link>
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/lan" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
-              LAN
+              LAN Zone
             </Link>
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/service" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
-              Servicio Técnico
+              Tech Support
             </Link>
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/shop" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
               Store
             </Link>
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="w-full text-center py-4 bg-black/60 border border-cyber/30 text-white font-orbitron hover:bg-cian/20 hover:border-cian transition-all uppercase tracking-widest rounded-sm">
-              Contacto
+              Contact
             </Link>
             
             {!session && (
               <Link onClick={() => setIsMobileMenuOpen(false)} href="/login" className="w-full text-center mt-6 py-5 bg-cian text-carbon font-orbitron font-bold text-lg hover:shadow-glow-cian transition-all uppercase tracking-widest rounded-sm border-2 border-cian">
-                Ingresar
+                Sign In
               </Link>
             )}
           </div>
