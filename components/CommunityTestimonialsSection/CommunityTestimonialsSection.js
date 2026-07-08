@@ -13,7 +13,7 @@ const TESTIMONIALS = [
     name: 'Alex "Viper" Chen',
     role: 'Pro VALORANT Player',
     text: 'The latency in the LAN Zone is literally zero. The 240Hz monitors and RTX 4070s give you a massive competitive advantage. Sudoku is my second home.',
-    avatar: 'https://images.unsplash.com/photo-1566492031522-8730999966b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80'
+    avatar: '/assets/testimonials/alex_viper_chen.jpg'
   },
   {
     name: 'Sarah "Nova" Jenkins',
