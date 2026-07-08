@@ -29,7 +29,8 @@ export default function Header() {
   }, { scope: container });
 
   return (
-    <header 
+    <>
+      <header 
       ref={container}
       className="fixed top-0 w-full z-50 bg-carbon/90 backdrop-blur-md border-b border-white/5 shadow-lg"
     >
@@ -95,6 +96,7 @@ export default function Header() {
           </Link>
         </div>
       </nav>
+    </header>
 
       {/* Gamer Style Mobile Menu Modal */}
       {isMobileMenuOpen && (
@@ -138,6 +140,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
