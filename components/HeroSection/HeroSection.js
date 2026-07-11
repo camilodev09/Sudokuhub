@@ -12,7 +12,6 @@ export default function HeroSection() {
     // Entrance animations
     gsap.from('.hero-text', {
       y: 50,
-      opacity: 0,
       duration: 1.2,
       stagger: 0.2,
       ease: 'power3.out',

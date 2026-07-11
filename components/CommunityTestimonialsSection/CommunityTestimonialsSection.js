@@ -39,7 +39,6 @@ export default function CommunityTestimonialsSection() {
         start: 'top 75%',
       },
       scale: 0.9,
-      opacity: 0,
       duration: 0.8,
       stagger: 0.2,
       ease: 'back.out(1.7)'

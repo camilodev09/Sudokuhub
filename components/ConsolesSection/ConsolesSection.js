@@ -16,7 +16,6 @@ export default function ConsolesSection() {
         trigger: container.current,
         start: 'top 75%',
       },
-      opacity: 0,
       scale: 0.95,
       y: 50,
       duration: 1,
