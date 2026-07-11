@@ -33,7 +33,12 @@ export default function Footer() {
           <Link href="/">
             <img src="/assets/logoletra.svg" alt="Sudoku Games" className="h-8 md:h-10 w-auto" />
           </Link>
-          <p className="text-cyber font-mono text-sm mt-2">© 2026 Sudoku Games. All rights reserved.</p>
+          <div className="mt-4 text-cyber font-mono text-sm text-center md:text-left">
+            <p>1234 Silicon Avenue, Suite 400</p>
+            <p>San Jose, CA 95131, United States</p>
+            <p className="mt-2 text-cian">support@sudokugames.com</p>
+          </div>
+          <p className="text-cyber font-mono text-xs mt-6 opacity-60">© 2026 Sudoku Games. All rights reserved.</p>
         </div>
 
         <div className="footer-element flex gap-6 items-center">
