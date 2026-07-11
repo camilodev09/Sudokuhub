@@ -8,24 +8,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        carbon: '#000C43',
-        graphite: '#050714',
-        cian: '#00FFFF',
-        tactical: '#3CF73D',
-        lilac: '#FF00FF',
+        carbon: '#0B0F19',
+        graphite: '#131B2B',
+        cian: '#00FF94',
+        tactical: '#00FF94',
+        lilac: '#A78BFA',
         cyber: '#888888',
         error: '#FF4545',
       },
       fontFamily: {
-        syne: ['Syne', 'sans-serif'],
+        syne: ['"Space Grotesk"', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-        mono: ['Roboto Mono', 'monospace'],
-        orbitron: ['Orbitron', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        orbitron: ['"JetBrains Mono"', 'monospace'],
       },
       boxShadow: {
-        'glow-cian': '0 0 15px rgba(0, 255, 255, 0.6)',
-        'glow-tactical': '0 0 15px rgba(60, 247, 61, 0.6)',
-        'glow-lilac': '0 0 15px rgba(255, 0, 255, 0.6)',
+        'glow-cian': '0 0 15px rgba(0, 255, 148, 0.4)',
+        'glow-tactical': '0 0 15px rgba(0, 255, 148, 0.4)',
+        'glow-lilac': '0 0 15px rgba(167, 139, 250, 0.4)',
         'cyber-card': '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)',
       },
       backgroundImage: {

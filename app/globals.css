@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Syne:wght@700;800&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +6,11 @@
 
 @layer base {
   html, body {
-    @apply bg-carbon text-white font-inter antialiased overflow-x-hidden;
+    @apply bg-carbon text-slate-50 font-inter antialiased overflow-x-hidden;
   }
   
   h1 {
-    @apply font-syne font-extrabold;
+    @apply font-syne font-bold;
   }
   
   h2, h3, h4, h5, h6 {
@@ -21,14 +21,14 @@
 @layer utilities {
   .bg-cyber-grid {
     background-image: 
-      linear-gradient(rgba(136, 136, 136, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(136, 136, 136, 0.1) 1px, transparent 1px);
+      linear-gradient(rgba(136, 136, 136, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(136, 136, 136, 0.05) 1px, transparent 1px);
     background-size: 30px 30px;
     background-position: center center;
   }
 
   .glass-panel {
-    @apply bg-graphite/80 backdrop-blur-md border border-white/5 shadow-cyber-card;
+    @apply bg-graphite border border-white/10 transition-all duration-300;
   }
   
   .tech-border {
