@@ -5,6 +5,7 @@ import FeaturesSection from '../components/FeaturesSection/FeaturesSection';
 import FeaturedProductsSection from '../components/FeaturedProductsSection/FeaturedProductsSection';
 import CommunityTestimonialsSection from '../components/CommunityTestimonialsSection/CommunityTestimonialsSection';
 import ConsolesSection from '../components/ConsolesSection/ConsolesSection';
+import InfrastructureSection from '../components/InfrastructureSection/InfrastructureSection';
 import Footer from '../components/Footer/Footer';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <BrandsSection />
+        <InfrastructureSection />
         <FeaturesSection />
         <FeaturedProductsSection />
         <ConsolesSection />
