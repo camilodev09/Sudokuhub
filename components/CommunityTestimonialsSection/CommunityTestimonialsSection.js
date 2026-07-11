@@ -60,12 +60,12 @@ export default function CommunityTestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {TESTIMONIALS.map((t, idx) => (
-            <div key={idx} className="testimonial-card bg-carbon border border-white/10 p-8 rounded-sm relative group hover:border-cian/50 transition-colors duration-500">
+            <div key={idx} className="testimonial-card bg-carbon border border-white/10 p-8 rounded-sm relative group hover:border-cian/50 transition-colors duration-500 h-full flex flex-col">
               <i className="fas fa-quote-right absolute top-6 right-6 text-4xl text-white/5 group-hover:text-cian/20 transition-colors duration-500"></i>
               
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-6 shrink-0">
                 <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-tactical">
                   <img src={t.avatar} alt={t.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                 </div>
@@ -75,7 +75,7 @@ export default function CommunityTestimonialsSection() {
                 </div>
               </div>
               
-              <p className="text-cyber font-inter leading-relaxed italic">
+              <p className="text-cyber font-inter leading-relaxed italic flex-grow">
                 "{t.text}"
               </p>
             </div>

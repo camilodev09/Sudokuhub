@@ -73,10 +73,10 @@ export default function FeaturedProductsSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {FEATURED.map((product) => (
-            <div key={product.id} className="featured-card glass-panel group flex flex-col justify-between overflow-hidden relative">
-              <div className="relative w-full h-56 overflow-hidden bg-black">
+            <div key={product.id} className="featured-card glass-panel group flex flex-col justify-between overflow-hidden relative h-full">
+              <div className="relative w-full h-56 shrink-0 overflow-hidden bg-black">
                 <img src={product.image} alt={product.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity group-hover:scale-105 duration-500" />
                 <div className="absolute top-2 right-2 bg-carbon/80 backdrop-blur-sm border border-cyber/30 px-3 py-1 rounded-sm text-xs font-orbitron text-cian">
                   {product.brand}
