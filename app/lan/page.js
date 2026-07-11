@@ -19,13 +19,13 @@ export default function LanPage() {
     <div className="min-h-screen bg-carbon overflow-hidden">
       
       {/* Hero with Reservation Widget */}
-      <div className="relative w-full h-[90vh] flex flex-col md:flex-row items-center justify-between px-4 md:px-16 pt-20">
+      <div className="relative w-full min-h-screen md:min-h-[90vh] h-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-16 pt-28 pb-16 md:py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3')] bg-cover bg-center mix-blend-overlay opacity-60"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-carbon via-carbon/80 to-transparent"></div>
         <div className="absolute inset-0 bg-cian/10 mix-blend-color"></div>
 
         {/* Left Content */}
-        <div className="relative z-10 max-w-2xl text-left md:w-1/2">
+        <div className="relative z-10 max-w-2xl text-left md:w-1/2 mb-10 md:mb-0">
           <h1 className="text-5xl md:text-7xl font-syne font-extrabold text-cian uppercase tracking-tighter drop-shadow-2xl px-2 md:px-0">PREMIUM LAN ZONE</h1>
           <p className="mt-6 text-xl font-inter text-white opacity-90 leading-relaxed">
             Experience true performance. 50+ stations equipped with NVIDIA RTX 4070, Zowie 240Hz monitors, and premium ergonomic chairs. Zero lag.
@@ -33,7 +33,7 @@ export default function LanPage() {
         </div>
 
         {/* Right Widget */}
-        <div className="relative z-10 w-full md:w-[400px] glass-panel p-8 rounded-sm shadow-2xl mt-8 md:mt-0">
+        <div className="relative z-20 w-full md:w-[400px] glass-panel p-8 rounded-sm shadow-2xl mt-4 md:mt-0">
           <h2 className="text-2xl font-orbitron text-cian mb-6 text-center uppercase tracking-widest">Book Your PC</h2>
           
           <form onSubmit={handleReservation} className="flex flex-col gap-4">
@@ -44,6 +44,7 @@ export default function LanPage() {
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
                 className="w-full bg-black/50 border border-cyber/30 rounded-sm px-4 py-3 text-white font-mono focus:border-cian focus:outline-none transition-colors"
+                style={{ colorScheme: 'dark' }}
                 required
               />
             </div>
