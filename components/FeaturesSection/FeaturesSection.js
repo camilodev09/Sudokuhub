@@ -14,10 +14,9 @@ export default function FeaturesSection() {
     gsap.from('.ticker-item', {
       scrollTrigger: {
         trigger: container.current,
-        start: 'top 80%',
+        start: 'top 95%',
       },
-      opacity: 0,
-      y: 20,
+      y: 30,
       duration: 0.8,
       stagger: 0.2,
       ease: 'power2.out'
